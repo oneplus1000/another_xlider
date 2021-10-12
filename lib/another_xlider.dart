@@ -2346,6 +2346,7 @@ class _MakeHandler extends StatelessWidget {
 
     return Center(
       child: Container(
+        //color: Colors.deepOrange,
         key: id,
         width: localWidth,
         height: localHeight,
@@ -2363,12 +2364,13 @@ class _MakeHandler extends StatelessWidget {
               child: Opacity(
                 opacity: handler.opacity,
                 child: Container(
+                  //color: Colors.blueGrey,
                   alignment: Alignment.center,
                   foregroundDecoration: handler.foregroundDecoration,
                   decoration: handler.decoration,
                   transform: handler.transform,
-                  width: width,
-                  height: height,
+                  //width: width! + 200,
+                  //height: height! + 100,
                   child: handler.child,
                 ),
               ),

@@ -12,7 +12,39 @@ class MyApp extends StatelessWidget {
         //
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Xlider Demo'),
+      home: MyHome2(), //MyHomePage(title: 'Xlider Demo'),
+    );
+  }
+}
+
+class MyHome2 extends StatelessWidget {
+  const MyHome2({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.amber,
+      child: SafeArea(
+        child: Stack(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  color: Colors.green,
+                  child: FlutterSlider(
+                    handlerWidth: 20,
+                    axis: Axis.vertical,
+                    min: 0,
+                    max: 100,
+                    values: [60],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
