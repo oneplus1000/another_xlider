@@ -31,13 +31,20 @@ class MyHome2 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Container(
-                  color: Colors.green,
+                  color: Colors.white,
                   child: FlutterSlider(
                     handlerWidth: 20,
                     axis: Axis.vertical,
                     min: 0,
                     max: 100,
                     values: [60],
+                    handler: FlutterSliderHandler(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(width: 0.5),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
                   ),
                 ),
               ],
